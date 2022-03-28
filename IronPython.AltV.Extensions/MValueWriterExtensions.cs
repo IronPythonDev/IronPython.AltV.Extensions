@@ -32,6 +32,13 @@ namespace IronPython.AltV.Extensions
 
             return writer;
         }
+        public static IMValueWriter WriteProperty(this IMValueWriter writer, string propertyName, IWritable writable)
+        {
+            writer.Name(propertyName);
+            writable.OnWrite(writer);
+
+            return writer;
+        }
         public static IMValueWriter WriteProperty(this IMValueWriter writer, string propertyName, int value)
         {
             writer.Name(propertyName);
