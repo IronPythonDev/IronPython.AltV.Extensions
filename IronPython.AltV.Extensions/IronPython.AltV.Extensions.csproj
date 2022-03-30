@@ -11,7 +11,7 @@
     <RepositoryUrl>https://github.com/SimonMillerIO/IronPython.AltV.Extensions</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <FileVersion></FileVersion>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

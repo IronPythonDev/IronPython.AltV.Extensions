@@ -1,4 +1,6 @@
 ﻿using AltV.Net;
+using AltV.Net.Data;
+using System.Numerics;
 
 namespace IronPython.AltV.Extensions
 {
@@ -39,6 +41,31 @@ namespace IronPython.AltV.Extensions
 
             return writer;
         }
+
+        public static IMValueWriter WriteProperty(this IMValueWriter writer, string propertyName, Vector3 value)
+        {
+            writer.Name(propertyName);
+            writer.Value(value);
+
+            return writer;
+        }
+
+        public static IMValueWriter WriteProperty(this IMValueWriter writer, string propertyName, Rotation value)
+        {
+            writer.Name(propertyName);
+            writer.Value(value);
+
+            return writer;
+        }
+
+        public static IMValueWriter WriteProperty(this IMValueWriter writer, string propertyName, Position value)
+        {
+            writer.Name(propertyName);
+            writer.Value(value);
+
+            return writer;
+        }
+
         public static IMValueWriter WriteProperty(this IMValueWriter writer, string propertyName, int value)
         {
             writer.Name(propertyName);
